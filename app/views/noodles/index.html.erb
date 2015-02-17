@@ -1,0 +1,11 @@
+<%= link_to "New", new_noodle_path %>
+<br>
+
+<% @noodles.each do |noodle| %>
+
+<%= link_to noodle.shape, noodle_path(noodle) %>
+<%= noodle.sauce %>
+<br>
+
+<%= link_to "delete", noodle_path(noodle), method: "delete" %>
+<% end %>
